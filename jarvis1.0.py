@@ -15,6 +15,7 @@ import os
 from urllib.request import urlopen
 import wolframalpha
 import time
+from quoters import Quote
 
 
 engine = pyttsx3.init()
@@ -57,6 +58,8 @@ def wishme():
     
 
     speak("Jarvis at your service,how can i help you")
+    speak("Here is something interesting")
+    speak(Quote.print())
     
 
 def TakeCommand():
@@ -285,7 +288,7 @@ if __name__ == "__main__":
             ans = TakeCommand().lower()
             if 'yes' in ans:
                 os.system('shutdown /s /t 1')
-
+        
 
 
 
